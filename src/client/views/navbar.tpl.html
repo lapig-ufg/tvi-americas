@@ -2,15 +2,15 @@
   <nav class="navbar navbar-inverse container-fluid" ng-show="user.type == 'inspector'">
     <div class="blog-masthead row">
       <div class="col-md-6">
-          <span class="navbar-brand" style="font-weight: 900;">{{current}}/{{total}} Pontos</span>
+        <span class="navbar-brand" style="font-weight: 900;">{{current}}/{{total}} Puntos</span>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <label class="pull-right">
-        <button style="margin-top: 7px;" type="button" class="btn btn-danger" href="#" class="glyphicon glyphicon-off" ng-click="logoff()" style="color:white">Sair</button>
+        <label class="pull-right">
+          <button style="margin-top: 7px;" type="button" class="btn btn-danger" href="#" class="glyphicon glyphicon-off" ng-click="logoff()" style="color:white">Salir</button>
         </label>
         <label class="user-info pull-right">
           <b>{{user.name}}</b><br>
-          {{count}} ponto(s) inspecionado(s)
+          {{count}} punto(s) inspeccionado(s)
         </label>
       </div>
     </div>
@@ -19,14 +19,14 @@
     <div class="blog-masthead row">
       <div class="col-md-12">
         <ul class="col-md-4 nav navbar-nav" style="float: left; margin-top: 9px; margin-left: -10px">
-          <a ng-href="#/dashboard" style="color: white">&nbsp;Dashboard</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-href="#/supervisor" style="color: white">Pontos</a>
+          <a ng-href="#/dashboard" style="color: white">&nbsp;Panel de Control</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-href="#/supervisor" style="color: white">Puntos</a>
         </ul>
         <div class="col-md-4" ng-show="user" style="float: left">
-          <h3><center><span style="color: #FFFFFF"> {{user.campaign._id}} </span></center></h3> 
-        </div>  
+          <h3><center><span style="color: #FFFFFF"> {{user.campaign._id}} </span></center></h3>
+        </div>
         <div class="col-md-4" style="display: flex; justify-content: flex-end; align-items: center;">
-          <button type="button" class="btn btn-success" href="#" ng-click="downloadFinalReport()" style="color:white; margin-right: 5px">Relatório de Inspeções</button>
-          <button type="button" class="btn btn-danger" href="#" ng-click="logoff()" style="color:white">Sair</button>
+          <button type="button" class="btn btn-success" href="#" ng-click="downloadFinalReport()" style="color:white; margin-right: 5px">Informe de Inspecciones</button>
+          <button type="button" class="btn btn-danger" href="#" ng-click="logoff()" style="color:white">Salir</button>
         </div>
       </div>
     </div>

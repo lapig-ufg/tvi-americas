@@ -1,4 +1,3 @@
-
 <div style="overflow:hidden">
 	<div class="container-fluid" style="margin-top:20px">
 		<div class="row">
@@ -17,29 +16,29 @@
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="coverPoints"></div>
 				<div class="row"></div>
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="left: 50px">
-			<button class="btn btn-success" ng-click="setTable()" aria-label="Refresh">
-        <img class="image" src="assets/refresh.svg"></img>
-      </button>
-			<table class="table table-condensed table-users">
-				<thead>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="left: 50px">
+				<button class="btn btn-success" ng-click="setTable()" aria-label="Refrescar">
+					<img class="image" src="assets/refresh.svg"></img>
+				</button>
+				<table class="table table-condensed table-users">
+					<thead>
 					<tr>
-						<th>Nome: </th>
-						<th>Status: </th>
-						<th>Ponto Atual: </th>
-						<th>Data: </th>
+						<th>Nombre: </th>
+						<th>Estado: </th>
+						<th>Punto Actual: </th>
+						<th>Fecha: </th>
 					</tr>
-				</thead>
-				<tbody>
+					</thead>
+					<tbody>
 					<tr ng-repeat="colName in tableStatus track by $index">
 						<td> {{colName.name}}</td>
 						<td> {{colName.status}}</td>
 						<td> {{colName.atualPoint}}</td>
 						<td> {{colName.dateLastPoint}}</td>
 					</tr>
-				</tbody>
-			</table>
-		</div>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>

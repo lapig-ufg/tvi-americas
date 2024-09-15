@@ -1,6 +1,5 @@
 const express = require('express')
 , load = require('express-load')
-, path = require('path')
 , compression = require('compression')
 , responseTime = require('response-time')
 , bodyParser = require('body-parser')
@@ -51,20 +50,6 @@ app.middleware.repository.init(() => {
 		app.set('views', __dirname + '/templates');
 		app.set('view engine', 'ejs');
 
-		const publicDir = path.join(__dirname, '');
-
-		/*
-        app.use(requestTimeout({
-            'timeout': 1000 * 60 * 30,
-            'callback': function(err, options) {
-                var response = options.res;
-                if (err) {
-                    util.log('Timeout: ' + err);
-                }
-                response.end();
-            }
-        }));*/
-
 		app.use(responseTime());
 		app.use(bodyParser.json());
 		app.use(bodyParser.urlencoded({ extended: true }));
@@ -90,7 +75,7 @@ app.middleware.repository.init(() => {
 
 
 		const httpServer = http.listen(app.config.port, function () {
-			console.log('%s Server @ [port %s] [pid %s]', 'TVI Server', app.config.port, process.pid.toString());
+			console.log('%s Server @ [port %s] [pid %s]', 'TVI Americas Server', app.config.port, process.pid.toString());
 			if(process.env.PRIMARY_WORKER) {
 				app.middleware.jobs.start();
 			}
