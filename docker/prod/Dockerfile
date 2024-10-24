@@ -11,6 +11,4 @@ RUN if [ -d "/APP/tvi-americas" ]; then rm -Rf /APP/tvi-americas; fi  && \
     
 ADD ./src/server/node_modules /APP/tvi-americas/src/server/node_modules
 
-CMD [ "/bin/bash", "-c", "/APP/tvi-americas/src/server/prod-start.sh; tail -f /APP/tvi-americas/src/server/app.out"]
-
-ENTRYPOINT [ "/APP/monitor.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "/APP/monitor.sh"]
